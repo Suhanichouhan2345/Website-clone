@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(110, 167, 185);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product{
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+}
+
+.gallery{
+    flex-basis: 47%;
+    background-color: #241e20;
+    transform: scale(1.08);
+    box-shadow: -10px 5px 10px rgba(0,0,0,0.1);
+}
+
+.gallery img{
+    width: 100%;
+    display: block;
+}
+
+.details{
+    flex-basis: 53%;
+    background-color: #fff;
+    padding: 40px;
+    padding-left: 60px;
+    box-shadow: -10px 5px 10px rgba(0,0,0,0.1);
+}
+
+.details h1{
+    color: #333;
+    font-size: 35px;
+}
+
+.details h2{
+    color: #555;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.details h3{
+    color: #00d874;
+    margin-bottom: 20px;
+}
+
+.details p{
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Size Selection */
+
+.size-select p{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.size-select input{
+    display: none;
+}
+
+.size-select span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.size-select input:checked + span{
+    background: #00d874;
+    color: white;
+    border-color: #00d874;
+}
+
+/* Buttons */
+
+.buttons{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.cart-btn,
+.buy-btn{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-btn{
+    background: #333;
+    color: white;
+}
+
+.buy-btn{
+    background: #ff6600;
+    color: white;
+}
+
+.cart-btn:hover,
+.buy-btn:hover{
+    opacity: 0.9;
+}
