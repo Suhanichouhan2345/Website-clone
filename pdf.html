@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation Guide - Suhani Chouhan</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --text: #334155;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        header {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary);
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: var(--text);
+            font-size: 16px;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .section-title {
+            color: var(--secondary);
+            font-size: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .qa-block {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .qa-block:last-child {
+            border-bottom: none;
+        }
+
+        .question {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .question::before {
+            content: "Q: ";
+            color: var(--secondary);
+            margin-right: 5px;
+        }
+
+        .answer {
+            font-size: 15px;
+            padding-left: 22px;
+        }
+
+        .answer strong {
+            color: var(--primary);
+        }
+
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Technical Interview Preparation Roadmap</h1>
+        <p class="subtitle">Targeted Question Bank & Solutions for Suhani Chouhan</p>
+    </header>
+
+    <!-- Section 1 -->
+    <div class="section-title">1. Core Java & OOPs Principles</div>
+    
+    <div class="qa-block">
+        <div class="question">What is the difference between an Abstract Class and an Interface in Java?</div>
+        <div class="answer">
+            <strong>Answer:</strong> An abstract class can have both abstract and concrete methods, instance state variables, and constructors. It supports single inheritance. An interface (prior to Java 8) could only have abstract methods; now it supports default and static methods. A class can implement multiple interfaces, making it ideal for defining peripheral capabilities decoupled from the main class hierarchy.
+        </div>
+    </div>
+
+    <div class="qa-block">
+        <div class="question">Explain the 4 Pillars of Object-Oriented Programming (OOPs).</div>
+        <div class="answer">
+            <strong>Answer:</strong>
+            <ul>
+                <li><strong>Encapsulation:</strong> Wrapping data (variables) and code (methods) together into a single unit and restricting direct access using private modifiers.</li>
+                <li><strong>Inheritance:</strong> Mechanism where one class acquires the properties and behaviors of a parent class using the <code>extends</code> keyword.</li>
+                <li><strong>Polymorphism:</strong> Ability of a function or object to take multiple forms. Compile-time is achieved via method overloading; Runtime is achieved via method overriding.</li>
+                <li><strong>Abstraction:</strong> Hiding internal implementation complexities and showing only essential interfaces to the user.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="qa-block">
+        <div class="question">How does Garbage Collection work in Java?</div>
+        <div class="answer">
+            <strong>Answer:</strong> Java handles memory allocation automatically via the Garbage Collector (GC) running on the JVM. The GC targets the Heap memory area to track and identify objects that are no longer reachable by any live reference threads. Unreferenced objects are periodically swept and destroyed to free up system memory chunks.
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-title">2. Data Structures & Algorithms (DSA)</div>
+    
+    <div class="qa-block">
+        <div class="question">Compare an Array and a Linked List data structure.</div>
+        <div class="answer">
+            <strong>Answer:</strong> Arrays store elements in contiguous memory locations, offering O(1) time complexity for random element lookups via indexing. However, its size is fixed at declaration. Linked Lists allocate nodes dynamically across arbitrary memory spaces connected via pointer references; lookups take O(N) sequential time, but insertions and deletions are highly efficient at O(1).
+        </div>
+    </div>
+
+    <div class="qa-block">
+        <div class="question">How do you detect a cycle in a Linked List structure?</div>
+        <div class="answer">
+            <strong>Answer:</strong> Use Floyd's Cycle-Finding Algorithm (Two-pointer technique). Initialize a 'slow' pointer moving one node at a time and a 'fast' pointer moving two nodes at a time. If a cycle exists, the fast pointer will eventually wrap around and meet the slow pointer. If it hits null, no cycle exists.
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-title">3. Full-Stack Web Development & Databases</div>
+    
+    <div class="qa-block">
+        <div class="question">What is the difference between SQL and NoSQL databases? Compare MySQL and MongoDB.</div>
+        <div class="answer">
+            <strong>Answer:</strong> MySQL is a Relational (SQL) database that stores structured data into predefined schemas, strict tables, rows, and relationships, utilizing ACID properties for transactional safety. MongoDB is a Non-Relational (NoSQL) document store mapping structured data inside dynamic JSON-like BSON schemas. MongoDB scales horizontally easily, whereas MySQL leans toward vertical scaling.
+        </div>
+    </div>
+
+    <div class="qa-block">
+        <div class="question">What is DOM Manipulation in JavaScript?</div>
+        <div class="answer">
+            <strong>Answer:</strong> The Document Object Model (DOM) is an API programming interface mapping XML/HTML documents into standard tree objects. JavaScript uses DOM manipulation methods (like <code>getElementById</code> or <code>querySelector</code>) to dynamically access, alter, delete, modify structural properties, or style active UI nodes based on live browser actions.
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-title">4. IoT & Hardware Systems</div>
+    
+    <div class="qa-block">
+        <div class="question">What is the role of the ESP8266 microcontroller module in IoT architectures?</div>
+        <div class="answer">
+            <strong>Answer:</strong> The ESP8266 is a low-cost, self-contained Wi-Fi microchip module featuring a built-in TCP/IP networking protocol stack. It allows standalone edge hardware controllers or Arduinos to hook directly into local WLAN interfaces, enabling direct edge-to-cloud server communication channels to pipe sensor readings.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
